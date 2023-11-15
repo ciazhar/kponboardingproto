@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package kponboardingproto;
+
+import "installment_category/installment_category.proto";
+
+option go_package = "github.com/djoonta/kponboardingproto";
+
+service InstallmentCategoryService {
+  rpc InstallmentCategoryCreate(InstallmentCategoryCreateRequest) returns (InstallmentCategoryCreateResponse) {}
+  rpc InstallmentCategoryFindID(InstallmentCategoryFindIDRequest) returns (InstallmentCategoryFindIDResponse) {}
+}
