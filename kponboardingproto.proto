@@ -3,10 +3,20 @@ syntax = "proto3";
 package kponboardingproto;
 
 import "installment_category/installment_category.proto";
+import "customer_identity/customer_identity.proto";
 
 option go_package = "github.com/djoonta/kponboardingproto";
 
 service InstallmentCategoryService {
   rpc InstallmentCategoryCreate(InstallmentCategoryCreateRequest) returns (InstallmentCategoryCreateResponse) {}
   rpc InstallmentCategoryFindID(InstallmentCategoryFindIDRequest) returns (InstallmentCategoryFindIDResponse) {}
+}
+
+service CustomerIdentityService {
+  rpc CustomerIdentityCreate(CustomerIdentityCreateRequest) returns (CustomerIdentityCreateResponse) {}
+  rpc CustomerIdentityUpdate(CustomerIdentityUpdateRequest) returns (CustomerIdentityUpdateResponse) {}
+  rpc CustomerIdentityDelete(CustomerIdentityDeleteRequest) returns (CustomerIdentityDeleteResponse) {}
+  rpc CustomerIdentityToggleStatus(CustomerIdentityToggleStatusRequest) returns (CustomerIdentityToggleStatusResponse) {}
+  rpc CustomerIdentityFindID(CustomerIdentityFindIDRequest) returns (CustomerIdentityFindIDResponse) {}
+  rpc CustomerIdentityFindAll(CustomerIdentityFindAllRequest) returns (CustomerIdentityFindAllResponse) {}
 }

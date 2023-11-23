@@ -1,0 +1,244 @@
+syntax = "proto3";
+
+import "pagination/pagination.proto";
+
+package kponboardingproto;
+
+option go_package = "github.com/djoonta/kponboardingproto/customer_identity";
+
+message CustomerIdentityInfo {
+  // Primary Key
+  string id = 1;
+
+  // Customer Details
+  string name = 2;
+  string nickname = 3;
+  string identity_number = 4;
+  string phone = 5;
+  string phone_family = 6;
+  string city_of_birth = 7;
+  string day_of_birth = 8;
+  string name_husband = 9;
+  string name_wife = 10;
+  string email = 11;
+  string address = 12;
+  string address_domicile = 13;
+  string customer_image = 14;
+  string identity_number_image = 15;
+  string husband_image = 16;
+  string wife_image = 17;
+  string home_image = 18;
+  string encumbrance_image = 19; // command (foto jaminan)
+  string family_card_image = 20; // command (foto Kk)
+  string longitude = 21;
+  string latitude = 22;
+  string password = 23;
+
+  // Relationships
+  string installment_category_id = 24;
+  string encumbrance_category_id = 25;
+  string profession_id = 26;
+
+  // Group Information
+  string name_group = 27;
+  string name_group_chairman = 28;
+
+  // Financial Details
+  double amount_loan = 29;
+  double amount_credit_payment = 30;
+
+  // Survey Information
+  string surveyor_name = 31;
+
+  // Time Period Information
+  int32 time_period = 32;
+  string time_period_category = 33; // command (hari,minggu, bulan)
+
+  // Location Information
+  string province = 34;
+  string regency = 35;
+  string district = 36;
+  string village = 37;
+  string postalcode = 38;
+
+  // Marriage Information
+  bool is_mariage = 39; // command (if false need add upload document approval_parent_file)
+  string approval_parent_file = 40; // command if is_mariage is false
+
+  // Status Information
+  string status = 41;
+
+  // Token Information
+  string token = 42;
+}
+
+message CustomerIdentityCreateRequest{
+  // Customer Details
+  string name = 1;
+  string nickname = 2;
+  string identity_number = 3;
+  string phone = 4;
+  string phone_family = 5;
+  string city_of_birth = 6;
+  string day_of_birth = 7;
+  string name_husband = 8;
+  string name_wife = 9;
+  string email = 10;
+  string address = 11;
+  string address_domicile = 12;
+  string customer_image = 13;
+  string identity_number_image = 14;
+  string husband_image = 15;
+  string wife_image = 16;
+  string home_image = 17;
+  string encumbrance_image = 18; // command (foto jaminan)
+  string family_card_image = 19; // command (foto Kk)
+  string longitude = 20;
+  string latitude = 21;
+  string password = 22;
+
+  // Relationships
+  string installment_category_id = 23;
+  string encumbrance_category_id = 24;
+  string profession_id = 25;
+
+  // Group Information
+  string name_group = 26;
+  string name_group_chairman = 27;
+
+  // Financial Details
+  double amount_loan = 28;
+  double amount_credit_payment = 29;
+
+  // Survey Information
+  string surveyor_name = 30;
+
+  // Time Period Information
+  int32 time_period = 31;
+  string time_period_category = 32; // command (hari,minggu, bulan)
+
+  // Location Information
+  string province = 33;
+  string regency = 34;
+  string district = 35;
+  string village = 36;
+  string postalcode = 37;
+
+  // Marriage Information
+  bool is_mariage = 38; // command (if false need add upload document approval_parent_file)
+  string approval_parent_file = 39; // command if is_mariage is false
+
+  // Status Information
+  string status = 40;
+
+  // Token Information
+  string token = 41;
+}
+
+message CustomerIdentityCreateResponse{
+  bool success = 1;
+}
+
+message CustomerIdentityUpdateRequest{
+  // Primary Key
+  string id = 1;
+
+  // Customer Details
+  string name = 2;
+  string nickname = 3;
+  string identity_number = 4;
+  string phone = 5;
+  string phone_family = 6;
+  string city_of_birth = 7;
+  string day_of_birth = 8;
+  string name_husband = 9;
+  string name_wife = 10;
+  string email = 11;
+  string address = 12;
+  string address_domicile = 13;
+  string customer_image = 14;
+  string identity_number_image = 15;
+  string husband_image = 16;
+  string wife_image = 17;
+  string home_image = 18;
+  string encumbrance_image = 19; // command (foto jaminan)
+  string family_card_image = 20; // command (foto Kk)
+  string longitude = 21;
+  string latitude = 22;
+  string password = 23;
+
+  // Relationships
+  string installment_category_id = 24;
+  string encumbrance_category_id = 25;
+  string profession_id = 26;
+
+  // Group Information
+  string name_group = 27;
+  string name_group_chairman = 28;
+
+  // Financial Details
+  double amount_loan = 29;
+  double amount_credit_payment = 30;
+
+  // Survey Information
+  string surveyor_name = 31;
+
+  // Time Period Information
+  int32 time_period = 32;
+  string time_period_category = 33; // command (hari,minggu, bulan)
+
+  // Location Information
+  string province = 34;
+  string regency = 35;
+  string district = 36;
+  string village = 37;
+  string postalcode = 38;
+
+  // Marriage Information
+  bool is_mariage = 39; // command (if false need add upload document approval_parent_file)
+  string approval_parent_file = 40; // command if is_mariage is false
+
+  // Status Information
+  string status = 41;
+
+  // Token Information
+  string token = 42;
+}
+
+message CustomerIdentityUpdateResponse{
+  bool success = 1;
+}
+
+message CustomerIdentityDeleteRequest{
+  string id = 1;
+}
+
+message CustomerIdentityDeleteResponse{
+  bool success = 1;
+}
+
+message CustomerIdentityToggleStatusRequest{
+  string id = 1;
+}
+
+message CustomerIdentityToggleStatusResponse{
+  bool success = 1;
+}
+
+message CustomerIdentityFindIDRequest{
+  string id = 1;
+}
+
+message CustomerIdentityFindIDResponse{
+    CustomerIdentityInfo customer_identity_info = 1;
+}
+
+message CustomerIdentityFindAllRequest{
+  string page = 1;
+  string limit = 2;
+}
+
+message CustomerIdentityFindAllResponse{
+  repeated CustomerIdentityInfo customer_identities = 1;
+  PaginationInfo pagination = 2;
+}
