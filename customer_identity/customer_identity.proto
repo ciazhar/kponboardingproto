@@ -130,9 +130,6 @@ message CustomerIdentityCreateRequest{
 
   // Status Information
   string status = 40;
-
-  // Token Information
-  string token = 41;
 }
 
 message CustomerIdentityCreateResponse{
@@ -200,9 +197,6 @@ message CustomerIdentityUpdateRequest{
 
   // Status Information
   string status = 41;
-
-  // Token Information
-  string token = 42;
 }
 
 message CustomerIdentityUpdateResponse{
