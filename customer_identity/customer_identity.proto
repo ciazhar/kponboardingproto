@@ -224,7 +224,7 @@ message CustomerIdentityFindIDRequest{
 }
 
 message CustomerIdentityFindIDResponse{
-    CustomerIdentityInfo customer_identity_info = 1;
+  CustomerIdentityInfo customer_identity_info = 1;
 }
 
 message CustomerIdentityFindAllRequest{
@@ -234,5 +234,5 @@ message CustomerIdentityFindAllRequest{
 
 message CustomerIdentityFindAllResponse{
   repeated CustomerIdentityInfo customer_identities = 1;
-  PaginationInfo pagination = 2;
+  OnboardingPaginationInfo pagination = 2;
 }
