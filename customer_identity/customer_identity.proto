@@ -130,9 +130,6 @@ message CustomerIdentityCreateRequest{
 
   // Status Information
   string status = 40;
-
-  // Token Information
-  string token = 41;
 }
 
 message CustomerIdentityCreateResponse{
@@ -200,9 +197,6 @@ message CustomerIdentityUpdateRequest{
 
   // Status Information
   string status = 41;
-
-  // Token Information
-  string token = 42;
 }
 
 message CustomerIdentityUpdateResponse{
@@ -230,7 +224,7 @@ message CustomerIdentityFindIDRequest{
 }
 
 message CustomerIdentityFindIDResponse{
-    CustomerIdentityInfo customer_identity_info = 1;
+  CustomerIdentityInfo customer_identity_info = 1;
 }
 
 message CustomerIdentityFindAllRequest{
@@ -240,5 +234,5 @@ message CustomerIdentityFindAllRequest{
 
 message CustomerIdentityFindAllResponse{
   repeated CustomerIdentityInfo customer_identities = 1;
-  PaginationInfo pagination = 2;
+  OnboardingPaginationInfo pagination = 2;
 }

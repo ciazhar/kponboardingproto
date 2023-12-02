@@ -4,7 +4,7 @@ package kponboardingproto;
 
 option go_package = "github.com/djoonta/kponboardingproto/pagination";
 
-message PaginationInfo {
+message OnboardingPaginationInfo {
   int32 current_page = 1;
   int32 limit = 2;
   int32 offset = 3;
