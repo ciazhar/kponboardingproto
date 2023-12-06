@@ -1,5 +1,5 @@
 PROTOC_MAIN = ./kponboardingproto.proto
-PROTOC_PAGINATION = ./pagination/pagination.proto
+PROTOC_PAGINATION = ./onboarding_pagination/onboarding_pagination.proto
 PROTOC_INSTALLMENT_CATEGORY = ./installment_category/installment_category.proto
 PROTOC_CUSTOMER_IDENTITY = ./customer_identity/customer_identity.proto
 PROTOC = protoc
