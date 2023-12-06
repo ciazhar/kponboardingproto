@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+import "onboarding_pagination/onboarding_pagination.proto";
+
+package kponboardingproto;
+
+option go_package = "github.com/djoonta/kponboardingproto/customer_identity_verification";
+
+message CustomerIdentityVerificationInfo {
+  // Primary Key
+  string id = 1;
+
+  // Fields
+  string application_number = 2;
+  string rejection_notes = 3;
+  string status_verification = 4;
+  double amount_credit_approved = 5;
+  string amount_withdraw_date = 6;
+  string contract_document_image = 7;
+  string customer_identity_image = 8;
+  string group_chairman_image = 9;
+  string created_at = 10;
+  string created_by = 11;
+  string updated_at = 12;
+  string updated_by = 13;
+}
+
+message CustomerIdentityVerificationCreateRequest {
+  string application_number = 1;
+  string rejection_notes = 2;
+  string status_verification = 3;
+  double amount_credit_approved = 4;
+  string amount_withdraw_date = 5;
+  string contract_document_image = 6;
+  string customer_identity_image = 7;
+  string group_chairman_image = 8;
+}
+
+message CustomerIdentityVerificationCreateResponse {
+  bool success = 1;
+}
+
+message CustomerIdentityVerificationUpdateRequest {
+  string id = 1;
+  string application_number = 2;
+  string rejection_notes = 3;
+  string status_verification = 4;
+  double amount_credit_approved = 5;
+  string amount_withdraw_date = 6;
+  string contract_document_image = 7;
+  string customer_identity_image = 8;
+  string group_chairman_image = 9;
+}
+
+message CustomerIdentityVerificationUpdateResponse {
+  bool success = 1;
+}
+
+message CustomerIdentityVerificationDeleteRequest {
+  string id = 1;
+}
+
+message CustomerIdentityVerificationDeleteResponse {
+  bool success = 1;
+}
+
+message CustomerIdentityVerificationFindIDRequest {
+  string id = 1;
+}
+
+message CustomerIdentityVerificationFindIDResponse {
+  CustomerIdentityVerificationInfo customer_identity_verification = 1;
+}
+
+message CustomerIdentityVerificationFindAllRequest {
+  string page = 1;
+  string limit = 2;
+}
+
+message CustomerIdentityVerificationFindAllResponse {
+  repeated CustomerIdentityVerificationInfo customer_identity_verifications = 1;
+  OnboardingPaginationInfo pagination = 2;
+}

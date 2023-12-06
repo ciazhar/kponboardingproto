@@ -9,6 +9,7 @@ package kponboardingproto
 import (
 	context "context"
 	customer_identity "github.com/djoonta/kponboardingproto/customer_identity"
+	customer_identity_verification "github.com/djoonta/kponboardingproto/customer_identity_verification"
 	installment_category "github.com/djoonta/kponboardingproto/installment_category"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -404,6 +405,237 @@ var CustomerIdentityService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CustomerIdentityFindAll",
 			Handler:    _CustomerIdentityService_CustomerIdentityFindAll_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "kponboardingproto.proto",
+}
+
+// CustomerIdentityVerificationServiceClient is the client API for CustomerIdentityVerificationService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
+type CustomerIdentityVerificationServiceClient interface {
+	CustomerIdentityVerificationCreate(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationCreateRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationCreateResponse, error)
+	CustomerIdentityVerificationUpdate(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationUpdateRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationUpdateResponse, error)
+	CustomerIdentityVerificationDelete(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationDeleteRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationDeleteResponse, error)
+	CustomerIdentityVerificationFindID(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindIDRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationFindIDResponse, error)
+	CustomerIdentityVerificationFindAll(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindAllRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityFindAllResponse, error)
+}
+
+type customerIdentityVerificationServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewCustomerIdentityVerificationServiceClient(cc grpc.ClientConnInterface) CustomerIdentityVerificationServiceClient {
+	return &customerIdentityVerificationServiceClient{cc}
+}
+
+func (c *customerIdentityVerificationServiceClient) CustomerIdentityVerificationCreate(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationCreateRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationCreateResponse, error) {
+	out := new(customer_identity_verification.CustomerIdentityVerificationCreateResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationCreate", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *customerIdentityVerificationServiceClient) CustomerIdentityVerificationUpdate(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationUpdateRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationUpdateResponse, error) {
+	out := new(customer_identity_verification.CustomerIdentityVerificationUpdateResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationUpdate", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *customerIdentityVerificationServiceClient) CustomerIdentityVerificationDelete(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationDeleteRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationDeleteResponse, error) {
+	out := new(customer_identity_verification.CustomerIdentityVerificationDeleteResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationDelete", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *customerIdentityVerificationServiceClient) CustomerIdentityVerificationFindID(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindIDRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationFindIDResponse, error) {
+	out := new(customer_identity_verification.CustomerIdentityVerificationFindIDResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationFindID", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *customerIdentityVerificationServiceClient) CustomerIdentityVerificationFindAll(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindAllRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityFindAllResponse, error) {
+	out := new(customer_identity.CustomerIdentityFindAllResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationFindAll", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// CustomerIdentityVerificationServiceServer is the server API for CustomerIdentityVerificationService service.
+// All implementations must embed UnimplementedCustomerIdentityVerificationServiceServer
+// for forward compatibility
+type CustomerIdentityVerificationServiceServer interface {
+	CustomerIdentityVerificationCreate(context.Context, *customer_identity_verification.CustomerIdentityVerificationCreateRequest) (*customer_identity_verification.CustomerIdentityVerificationCreateResponse, error)
+	CustomerIdentityVerificationUpdate(context.Context, *customer_identity_verification.CustomerIdentityVerificationUpdateRequest) (*customer_identity_verification.CustomerIdentityVerificationUpdateResponse, error)
+	CustomerIdentityVerificationDelete(context.Context, *customer_identity_verification.CustomerIdentityVerificationDeleteRequest) (*customer_identity_verification.CustomerIdentityVerificationDeleteResponse, error)
+	CustomerIdentityVerificationFindID(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindIDRequest) (*customer_identity_verification.CustomerIdentityVerificationFindIDResponse, error)
+	CustomerIdentityVerificationFindAll(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindAllRequest) (*customer_identity.CustomerIdentityFindAllResponse, error)
+	mustEmbedUnimplementedCustomerIdentityVerificationServiceServer()
+}
+
+// UnimplementedCustomerIdentityVerificationServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedCustomerIdentityVerificationServiceServer struct {
+}
+
+func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVerificationCreate(context.Context, *customer_identity_verification.CustomerIdentityVerificationCreateRequest) (*customer_identity_verification.CustomerIdentityVerificationCreateResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityVerificationCreate not implemented")
+}
+func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVerificationUpdate(context.Context, *customer_identity_verification.CustomerIdentityVerificationUpdateRequest) (*customer_identity_verification.CustomerIdentityVerificationUpdateResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityVerificationUpdate not implemented")
+}
+func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVerificationDelete(context.Context, *customer_identity_verification.CustomerIdentityVerificationDeleteRequest) (*customer_identity_verification.CustomerIdentityVerificationDeleteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityVerificationDelete not implemented")
+}
+func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVerificationFindID(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindIDRequest) (*customer_identity_verification.CustomerIdentityVerificationFindIDResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityVerificationFindID not implemented")
+}
+func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVerificationFindAll(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindAllRequest) (*customer_identity.CustomerIdentityFindAllResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityVerificationFindAll not implemented")
+}
+func (UnimplementedCustomerIdentityVerificationServiceServer) mustEmbedUnimplementedCustomerIdentityVerificationServiceServer() {
+}
+
+// UnsafeCustomerIdentityVerificationServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to CustomerIdentityVerificationServiceServer will
+// result in compilation errors.
+type UnsafeCustomerIdentityVerificationServiceServer interface {
+	mustEmbedUnimplementedCustomerIdentityVerificationServiceServer()
+}
+
+func RegisterCustomerIdentityVerificationServiceServer(s grpc.ServiceRegistrar, srv CustomerIdentityVerificationServiceServer) {
+	s.RegisterService(&CustomerIdentityVerificationService_ServiceDesc, srv)
+}
+
+func _CustomerIdentityVerificationService_CustomerIdentityVerificationCreate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_verification.CustomerIdentityVerificationCreateRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationCreate(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationCreate",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationCreate(ctx, req.(*customer_identity_verification.CustomerIdentityVerificationCreateRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CustomerIdentityVerificationService_CustomerIdentityVerificationUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_verification.CustomerIdentityVerificationUpdateRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationUpdate(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationUpdate",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationUpdate(ctx, req.(*customer_identity_verification.CustomerIdentityVerificationUpdateRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CustomerIdentityVerificationService_CustomerIdentityVerificationDelete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_verification.CustomerIdentityVerificationDeleteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationDelete(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationDelete",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationDelete(ctx, req.(*customer_identity_verification.CustomerIdentityVerificationDeleteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CustomerIdentityVerificationService_CustomerIdentityVerificationFindID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_verification.CustomerIdentityVerificationFindIDRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationFindID(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationFindID",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationFindID(ctx, req.(*customer_identity_verification.CustomerIdentityVerificationFindIDRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CustomerIdentityVerificationService_CustomerIdentityVerificationFindAll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_verification.CustomerIdentityVerificationFindAllRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationFindAll(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationFindAll",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityVerificationServiceServer).CustomerIdentityVerificationFindAll(ctx, req.(*customer_identity_verification.CustomerIdentityVerificationFindAllRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// CustomerIdentityVerificationService_ServiceDesc is the grpc.ServiceDesc for CustomerIdentityVerificationService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var CustomerIdentityVerificationService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "kponboardingproto.CustomerIdentityVerificationService",
+	HandlerType: (*CustomerIdentityVerificationServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "CustomerIdentityVerificationCreate",
+			Handler:    _CustomerIdentityVerificationService_CustomerIdentityVerificationCreate_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityVerificationUpdate",
+			Handler:    _CustomerIdentityVerificationService_CustomerIdentityVerificationUpdate_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityVerificationDelete",
+			Handler:    _CustomerIdentityVerificationService_CustomerIdentityVerificationDelete_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityVerificationFindID",
+			Handler:    _CustomerIdentityVerificationService_CustomerIdentityVerificationFindID_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityVerificationFindAll",
+			Handler:    _CustomerIdentityVerificationService_CustomerIdentityVerificationFindAll_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

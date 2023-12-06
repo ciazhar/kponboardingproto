@@ -3,6 +3,7 @@ syntax = "proto3";
 package kponboardingproto;
 
 import "installment_category/installment_category.proto";
+import "customer_identity_verification/customer_identity_verification.proto";
 import "customer_identity/customer_identity.proto";
 
 option go_package = "github.com/djoonta/kponboardingproto";
@@ -19,4 +20,12 @@ service CustomerIdentityService {
   rpc CustomerIdentityToggleStatus(CustomerIdentityToggleStatusRequest) returns (CustomerIdentityToggleStatusResponse) {}
   rpc CustomerIdentityFindID(CustomerIdentityFindIDRequest) returns (CustomerIdentityFindIDResponse) {}
   rpc CustomerIdentityFindAll(CustomerIdentityFindAllRequest) returns (CustomerIdentityFindAllResponse) {}
+}
+
+service CustomerIdentityVerificationService {
+  rpc CustomerIdentityVerificationCreate(CustomerIdentityVerificationCreateRequest) returns (CustomerIdentityVerificationCreateResponse) {}
+  rpc CustomerIdentityVerificationUpdate(CustomerIdentityVerificationUpdateRequest) returns (CustomerIdentityVerificationUpdateResponse) {}
+  rpc CustomerIdentityVerificationDelete(CustomerIdentityVerificationDeleteRequest) returns (CustomerIdentityVerificationDeleteResponse) {}
+  rpc CustomerIdentityVerificationFindID(CustomerIdentityVerificationFindIDRequest) returns (CustomerIdentityVerificationFindIDResponse) {}
+  rpc CustomerIdentityVerificationFindAll(CustomerIdentityVerificationFindAllRequest) returns (CustomerIdentityFindAllResponse) {}
 }
