@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package kponboardingproto;
 
-option go_package = "github.com/djoonta/kponboardingproto/pagination";
+option go_package = "github.com/djoonta/kponboardingproto/onboarding_pagination";
 
 message OnboardingPaginationInfo {
   int32 current_page = 1;
