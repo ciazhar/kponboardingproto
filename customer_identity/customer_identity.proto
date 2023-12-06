@@ -70,6 +70,11 @@ message CustomerIdentityInfo {
 
   // Token Information
   string token = 42;
+
+  // Relationships Detail
+  string installment_category_name = 43;
+  string encumbrance_category_name = 44;
+  string profession_name = 45;
 }
 
 message CustomerIdentityCreateRequest{
