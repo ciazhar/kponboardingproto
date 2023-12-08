@@ -27,5 +27,5 @@ service CustomerIdentityVerificationService {
   rpc CustomerIdentityVerificationUpdate(CustomerIdentityVerificationUpdateRequest) returns (CustomerIdentityVerificationUpdateResponse) {}
   rpc CustomerIdentityVerificationDelete(CustomerIdentityVerificationDeleteRequest) returns (CustomerIdentityVerificationDeleteResponse) {}
   rpc CustomerIdentityVerificationFindID(CustomerIdentityVerificationFindIDRequest) returns (CustomerIdentityVerificationFindIDResponse) {}
-  rpc CustomerIdentityVerificationFindAll(CustomerIdentityVerificationFindAllRequest) returns (CustomerIdentityFindAllResponse) {}
+  rpc CustomerIdentityVerificationFindAll(CustomerIdentityVerificationFindAllRequest) returns (CustomerIdentityVerificationFindAllResponse) {}
 }
