@@ -419,7 +419,7 @@ type CustomerIdentityVerificationServiceClient interface {
 	CustomerIdentityVerificationUpdate(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationUpdateRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationUpdateResponse, error)
 	CustomerIdentityVerificationDelete(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationDeleteRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationDeleteResponse, error)
 	CustomerIdentityVerificationFindID(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindIDRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationFindIDResponse, error)
-	CustomerIdentityVerificationFindAll(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindAllRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityFindAllResponse, error)
+	CustomerIdentityVerificationFindAll(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindAllRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationFindAllResponse, error)
 }
 
 type customerIdentityVerificationServiceClient struct {
@@ -466,8 +466,8 @@ func (c *customerIdentityVerificationServiceClient) CustomerIdentityVerification
 	return out, nil
 }
 
-func (c *customerIdentityVerificationServiceClient) CustomerIdentityVerificationFindAll(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindAllRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityFindAllResponse, error) {
-	out := new(customer_identity.CustomerIdentityFindAllResponse)
+func (c *customerIdentityVerificationServiceClient) CustomerIdentityVerificationFindAll(ctx context.Context, in *customer_identity_verification.CustomerIdentityVerificationFindAllRequest, opts ...grpc.CallOption) (*customer_identity_verification.CustomerIdentityVerificationFindAllResponse, error) {
+	out := new(customer_identity_verification.CustomerIdentityVerificationFindAllResponse)
 	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityVerificationService/CustomerIdentityVerificationFindAll", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -483,7 +483,7 @@ type CustomerIdentityVerificationServiceServer interface {
 	CustomerIdentityVerificationUpdate(context.Context, *customer_identity_verification.CustomerIdentityVerificationUpdateRequest) (*customer_identity_verification.CustomerIdentityVerificationUpdateResponse, error)
 	CustomerIdentityVerificationDelete(context.Context, *customer_identity_verification.CustomerIdentityVerificationDeleteRequest) (*customer_identity_verification.CustomerIdentityVerificationDeleteResponse, error)
 	CustomerIdentityVerificationFindID(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindIDRequest) (*customer_identity_verification.CustomerIdentityVerificationFindIDResponse, error)
-	CustomerIdentityVerificationFindAll(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindAllRequest) (*customer_identity.CustomerIdentityFindAllResponse, error)
+	CustomerIdentityVerificationFindAll(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindAllRequest) (*customer_identity_verification.CustomerIdentityVerificationFindAllResponse, error)
 	mustEmbedUnimplementedCustomerIdentityVerificationServiceServer()
 }
 
@@ -503,7 +503,7 @@ func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVe
 func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVerificationFindID(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindIDRequest) (*customer_identity_verification.CustomerIdentityVerificationFindIDResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityVerificationFindID not implemented")
 }
-func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVerificationFindAll(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindAllRequest) (*customer_identity.CustomerIdentityFindAllResponse, error) {
+func (UnimplementedCustomerIdentityVerificationServiceServer) CustomerIdentityVerificationFindAll(context.Context, *customer_identity_verification.CustomerIdentityVerificationFindAllRequest) (*customer_identity_verification.CustomerIdentityVerificationFindAllResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityVerificationFindAll not implemented")
 }
 func (UnimplementedCustomerIdentityVerificationServiceServer) mustEmbedUnimplementedCustomerIdentityVerificationServiceServer() {

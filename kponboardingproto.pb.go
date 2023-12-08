@@ -108,7 +108,7 @@ var file_kponboardingproto_proto_rawDesc = []byte{
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x32, 0x2e, 0x6b, 0x70, 0x6f, 0x6e, 0x62, 0x6f, 0x61, 0x72,
 	0x64, 0x69, 0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d,
 	0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x46, 0x69, 0x6e, 0x64, 0x41, 0x6c,
-	0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x32, 0xda, 0x06, 0x0a, 0x23,
+	0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x32, 0xe6, 0x06, 0x0a, 0x23,
 	0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79,
 	0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x12, 0xa3, 0x01, 0x0a, 0x22, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
@@ -152,48 +152,50 @@ var file_kponboardingproto_proto_rawDesc = []byte{
 	0x6e, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43,
 	0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x56,
 	0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x46, 0x69, 0x6e, 0x64, 0x49,
-	0x44, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x9a, 0x01, 0x0a, 0x23,
+	0x44, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0xa6, 0x01, 0x0a, 0x23,
 	0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79,
 	0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x46, 0x69, 0x6e, 0x64,
 	0x41, 0x6c, 0x6c, 0x12, 0x3d, 0x2e, 0x6b, 0x70, 0x6f, 0x6e, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x69,
 	0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
 	0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61,
 	0x74, 0x69, 0x6f, 0x6e, 0x46, 0x69, 0x6e, 0x64, 0x41, 0x6c, 0x6c, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x32, 0x2e, 0x6b, 0x70, 0x6f, 0x6e, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x69, 0x6e,
+	0x73, 0x74, 0x1a, 0x3e, 0x2e, 0x6b, 0x70, 0x6f, 0x6e, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x69, 0x6e,
 	0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49,
-	0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x46, 0x69, 0x6e, 0x64, 0x41, 0x6c, 0x6c, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x26, 0x5a, 0x24, 0x67, 0x69, 0x74, 0x68,
-	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x64, 0x6a, 0x6f, 0x6f, 0x6e, 0x74, 0x61, 0x2f, 0x6b,
-	0x70, 0x6f, 0x6e, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x56, 0x65, 0x72, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74,
+	0x69, 0x6f, 0x6e, 0x46, 0x69, 0x6e, 0x64, 0x41, 0x6c, 0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x22, 0x00, 0x42, 0x26, 0x5a, 0x24, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63,
+	0x6f, 0x6d, 0x2f, 0x64, 0x6a, 0x6f, 0x6f, 0x6e, 0x74, 0x61, 0x2f, 0x6b, 0x70, 0x6f, 0x6e, 0x62,
+	0x6f, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var file_kponboardingproto_proto_goTypes = []interface{}{
-	(*installment_category.InstallmentCategoryCreateRequest)(nil),                     // 0: kponboardingproto.InstallmentCategoryCreateRequest
-	(*installment_category.InstallmentCategoryFindIDRequest)(nil),                     // 1: kponboardingproto.InstallmentCategoryFindIDRequest
-	(*customer_identity.CustomerIdentityCreateRequest)(nil),                           // 2: kponboardingproto.CustomerIdentityCreateRequest
-	(*customer_identity.CustomerIdentityUpdateRequest)(nil),                           // 3: kponboardingproto.CustomerIdentityUpdateRequest
-	(*customer_identity.CustomerIdentityDeleteRequest)(nil),                           // 4: kponboardingproto.CustomerIdentityDeleteRequest
-	(*customer_identity.CustomerIdentityToggleStatusRequest)(nil),                     // 5: kponboardingproto.CustomerIdentityToggleStatusRequest
-	(*customer_identity.CustomerIdentityFindIDRequest)(nil),                           // 6: kponboardingproto.CustomerIdentityFindIDRequest
-	(*customer_identity.CustomerIdentityFindAllRequest)(nil),                          // 7: kponboardingproto.CustomerIdentityFindAllRequest
-	(*customer_identity_verification.CustomerIdentityVerificationCreateRequest)(nil),  // 8: kponboardingproto.CustomerIdentityVerificationCreateRequest
-	(*customer_identity_verification.CustomerIdentityVerificationUpdateRequest)(nil),  // 9: kponboardingproto.CustomerIdentityVerificationUpdateRequest
-	(*customer_identity_verification.CustomerIdentityVerificationDeleteRequest)(nil),  // 10: kponboardingproto.CustomerIdentityVerificationDeleteRequest
-	(*customer_identity_verification.CustomerIdentityVerificationFindIDRequest)(nil),  // 11: kponboardingproto.CustomerIdentityVerificationFindIDRequest
-	(*customer_identity_verification.CustomerIdentityVerificationFindAllRequest)(nil), // 12: kponboardingproto.CustomerIdentityVerificationFindAllRequest
-	(*installment_category.InstallmentCategoryCreateResponse)(nil),                    // 13: kponboardingproto.InstallmentCategoryCreateResponse
-	(*installment_category.InstallmentCategoryFindIDResponse)(nil),                    // 14: kponboardingproto.InstallmentCategoryFindIDResponse
-	(*customer_identity.CustomerIdentityCreateResponse)(nil),                          // 15: kponboardingproto.CustomerIdentityCreateResponse
-	(*customer_identity.CustomerIdentityUpdateResponse)(nil),                          // 16: kponboardingproto.CustomerIdentityUpdateResponse
-	(*customer_identity.CustomerIdentityDeleteResponse)(nil),                          // 17: kponboardingproto.CustomerIdentityDeleteResponse
-	(*customer_identity.CustomerIdentityToggleStatusResponse)(nil),                    // 18: kponboardingproto.CustomerIdentityToggleStatusResponse
-	(*customer_identity.CustomerIdentityFindIDResponse)(nil),                          // 19: kponboardingproto.CustomerIdentityFindIDResponse
-	(*customer_identity.CustomerIdentityFindAllResponse)(nil),                         // 20: kponboardingproto.CustomerIdentityFindAllResponse
-	(*customer_identity_verification.CustomerIdentityVerificationCreateResponse)(nil), // 21: kponboardingproto.CustomerIdentityVerificationCreateResponse
-	(*customer_identity_verification.CustomerIdentityVerificationUpdateResponse)(nil), // 22: kponboardingproto.CustomerIdentityVerificationUpdateResponse
-	(*customer_identity_verification.CustomerIdentityVerificationDeleteResponse)(nil), // 23: kponboardingproto.CustomerIdentityVerificationDeleteResponse
-	(*customer_identity_verification.CustomerIdentityVerificationFindIDResponse)(nil), // 24: kponboardingproto.CustomerIdentityVerificationFindIDResponse
+	(*installment_category.InstallmentCategoryCreateRequest)(nil),                      // 0: kponboardingproto.InstallmentCategoryCreateRequest
+	(*installment_category.InstallmentCategoryFindIDRequest)(nil),                      // 1: kponboardingproto.InstallmentCategoryFindIDRequest
+	(*customer_identity.CustomerIdentityCreateRequest)(nil),                            // 2: kponboardingproto.CustomerIdentityCreateRequest
+	(*customer_identity.CustomerIdentityUpdateRequest)(nil),                            // 3: kponboardingproto.CustomerIdentityUpdateRequest
+	(*customer_identity.CustomerIdentityDeleteRequest)(nil),                            // 4: kponboardingproto.CustomerIdentityDeleteRequest
+	(*customer_identity.CustomerIdentityToggleStatusRequest)(nil),                      // 5: kponboardingproto.CustomerIdentityToggleStatusRequest
+	(*customer_identity.CustomerIdentityFindIDRequest)(nil),                            // 6: kponboardingproto.CustomerIdentityFindIDRequest
+	(*customer_identity.CustomerIdentityFindAllRequest)(nil),                           // 7: kponboardingproto.CustomerIdentityFindAllRequest
+	(*customer_identity_verification.CustomerIdentityVerificationCreateRequest)(nil),   // 8: kponboardingproto.CustomerIdentityVerificationCreateRequest
+	(*customer_identity_verification.CustomerIdentityVerificationUpdateRequest)(nil),   // 9: kponboardingproto.CustomerIdentityVerificationUpdateRequest
+	(*customer_identity_verification.CustomerIdentityVerificationDeleteRequest)(nil),   // 10: kponboardingproto.CustomerIdentityVerificationDeleteRequest
+	(*customer_identity_verification.CustomerIdentityVerificationFindIDRequest)(nil),   // 11: kponboardingproto.CustomerIdentityVerificationFindIDRequest
+	(*customer_identity_verification.CustomerIdentityVerificationFindAllRequest)(nil),  // 12: kponboardingproto.CustomerIdentityVerificationFindAllRequest
+	(*installment_category.InstallmentCategoryCreateResponse)(nil),                     // 13: kponboardingproto.InstallmentCategoryCreateResponse
+	(*installment_category.InstallmentCategoryFindIDResponse)(nil),                     // 14: kponboardingproto.InstallmentCategoryFindIDResponse
+	(*customer_identity.CustomerIdentityCreateResponse)(nil),                           // 15: kponboardingproto.CustomerIdentityCreateResponse
+	(*customer_identity.CustomerIdentityUpdateResponse)(nil),                           // 16: kponboardingproto.CustomerIdentityUpdateResponse
+	(*customer_identity.CustomerIdentityDeleteResponse)(nil),                           // 17: kponboardingproto.CustomerIdentityDeleteResponse
+	(*customer_identity.CustomerIdentityToggleStatusResponse)(nil),                     // 18: kponboardingproto.CustomerIdentityToggleStatusResponse
+	(*customer_identity.CustomerIdentityFindIDResponse)(nil),                           // 19: kponboardingproto.CustomerIdentityFindIDResponse
+	(*customer_identity.CustomerIdentityFindAllResponse)(nil),                          // 20: kponboardingproto.CustomerIdentityFindAllResponse
+	(*customer_identity_verification.CustomerIdentityVerificationCreateResponse)(nil),  // 21: kponboardingproto.CustomerIdentityVerificationCreateResponse
+	(*customer_identity_verification.CustomerIdentityVerificationUpdateResponse)(nil),  // 22: kponboardingproto.CustomerIdentityVerificationUpdateResponse
+	(*customer_identity_verification.CustomerIdentityVerificationDeleteResponse)(nil),  // 23: kponboardingproto.CustomerIdentityVerificationDeleteResponse
+	(*customer_identity_verification.CustomerIdentityVerificationFindIDResponse)(nil),  // 24: kponboardingproto.CustomerIdentityVerificationFindIDResponse
+	(*customer_identity_verification.CustomerIdentityVerificationFindAllResponse)(nil), // 25: kponboardingproto.CustomerIdentityVerificationFindAllResponse
 }
 var file_kponboardingproto_proto_depIdxs = []int32{
 	0,  // 0: kponboardingproto.InstallmentCategoryService.InstallmentCategoryCreate:input_type -> kponboardingproto.InstallmentCategoryCreateRequest
@@ -221,7 +223,7 @@ var file_kponboardingproto_proto_depIdxs = []int32{
 	22, // 22: kponboardingproto.CustomerIdentityVerificationService.CustomerIdentityVerificationUpdate:output_type -> kponboardingproto.CustomerIdentityVerificationUpdateResponse
 	23, // 23: kponboardingproto.CustomerIdentityVerificationService.CustomerIdentityVerificationDelete:output_type -> kponboardingproto.CustomerIdentityVerificationDeleteResponse
 	24, // 24: kponboardingproto.CustomerIdentityVerificationService.CustomerIdentityVerificationFindID:output_type -> kponboardingproto.CustomerIdentityVerificationFindIDResponse
-	20, // 25: kponboardingproto.CustomerIdentityVerificationService.CustomerIdentityVerificationFindAll:output_type -> kponboardingproto.CustomerIdentityFindAllResponse
+	25, // 25: kponboardingproto.CustomerIdentityVerificationService.CustomerIdentityVerificationFindAll:output_type -> kponboardingproto.CustomerIdentityVerificationFindAllResponse
 	13, // [13:26] is the sub-list for method output_type
 	0,  // [0:13] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
