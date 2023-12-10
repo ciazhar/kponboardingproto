@@ -5,6 +5,7 @@ package kponboardingproto;
 import "installment_category/installment_category.proto";
 import "customer_identity_verification/customer_identity_verification.proto";
 import "customer_identity/customer_identity.proto";
+import "customer_identity_bank/customer_identity_bank.proto";
 
 option go_package = "github.com/djoonta/kponboardingproto";
 
@@ -28,4 +29,12 @@ service CustomerIdentityVerificationService {
   rpc CustomerIdentityVerificationDelete(CustomerIdentityVerificationDeleteRequest) returns (CustomerIdentityVerificationDeleteResponse) {}
   rpc CustomerIdentityVerificationFindID(CustomerIdentityVerificationFindIDRequest) returns (CustomerIdentityVerificationFindIDResponse) {}
   rpc CustomerIdentityVerificationFindAll(CustomerIdentityVerificationFindAllRequest) returns (CustomerIdentityVerificationFindAllResponse) {}
+}
+
+service CustomerIdentityBankService {
+  rpc CustomerIdentityBankCreate(CustomerIdentityBankCreateRequest) returns (CustomerIdentityBankCreateResponse) {}
+  rpc CustomerIdentityBankUpdate(CustomerIdentityBankUpdateRequest) returns (CustomerIdentityBankUpdateResponse) {}
+  rpc CustomerIdentityBankDelete(CustomerIdentityBankDeleteRequest) returns (CustomerIdentityBankDeleteResponse) {}
+  rpc CustomerIdentityBankFindID(CustomerIdentityBankFindIDRequest) returns (CustomerIdentityBankFindIDResponse) {}
+  rpc CustomerIdentityBankFindAll(CustomerIdentityBankFindAllRequest) returns (CustomerIdentityBankFindAllResponse) {}
 }

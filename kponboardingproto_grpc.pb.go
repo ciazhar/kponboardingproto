@@ -9,6 +9,7 @@ package kponboardingproto
 import (
 	context "context"
 	customer_identity "github.com/djoonta/kponboardingproto/customer_identity"
+	customer_identity_bank "github.com/djoonta/kponboardingproto/customer_identity_bank"
 	customer_identity_verification "github.com/djoonta/kponboardingproto/customer_identity_verification"
 	installment_category "github.com/djoonta/kponboardingproto/installment_category"
 	grpc "google.golang.org/grpc"
@@ -636,6 +637,237 @@ var CustomerIdentityVerificationService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CustomerIdentityVerificationFindAll",
 			Handler:    _CustomerIdentityVerificationService_CustomerIdentityVerificationFindAll_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "kponboardingproto.proto",
+}
+
+// CustomerIdentityBankServiceClient is the client API for CustomerIdentityBankService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
+type CustomerIdentityBankServiceClient interface {
+	CustomerIdentityBankCreate(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankCreateRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankCreateResponse, error)
+	CustomerIdentityBankUpdate(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankUpdateRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankUpdateResponse, error)
+	CustomerIdentityBankDelete(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankDeleteRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankDeleteResponse, error)
+	CustomerIdentityBankFindID(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankFindIDRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankFindIDResponse, error)
+	CustomerIdentityBankFindAll(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankFindAllRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankFindAllResponse, error)
+}
+
+type customerIdentityBankServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewCustomerIdentityBankServiceClient(cc grpc.ClientConnInterface) CustomerIdentityBankServiceClient {
+	return &customerIdentityBankServiceClient{cc}
+}
+
+func (c *customerIdentityBankServiceClient) CustomerIdentityBankCreate(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankCreateRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankCreateResponse, error) {
+	out := new(customer_identity_bank.CustomerIdentityBankCreateResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankCreate", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *customerIdentityBankServiceClient) CustomerIdentityBankUpdate(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankUpdateRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankUpdateResponse, error) {
+	out := new(customer_identity_bank.CustomerIdentityBankUpdateResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankUpdate", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *customerIdentityBankServiceClient) CustomerIdentityBankDelete(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankDeleteRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankDeleteResponse, error) {
+	out := new(customer_identity_bank.CustomerIdentityBankDeleteResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankDelete", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *customerIdentityBankServiceClient) CustomerIdentityBankFindID(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankFindIDRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankFindIDResponse, error) {
+	out := new(customer_identity_bank.CustomerIdentityBankFindIDResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankFindID", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *customerIdentityBankServiceClient) CustomerIdentityBankFindAll(ctx context.Context, in *customer_identity_bank.CustomerIdentityBankFindAllRequest, opts ...grpc.CallOption) (*customer_identity_bank.CustomerIdentityBankFindAllResponse, error) {
+	out := new(customer_identity_bank.CustomerIdentityBankFindAllResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankFindAll", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// CustomerIdentityBankServiceServer is the server API for CustomerIdentityBankService service.
+// All implementations must embed UnimplementedCustomerIdentityBankServiceServer
+// for forward compatibility
+type CustomerIdentityBankServiceServer interface {
+	CustomerIdentityBankCreate(context.Context, *customer_identity_bank.CustomerIdentityBankCreateRequest) (*customer_identity_bank.CustomerIdentityBankCreateResponse, error)
+	CustomerIdentityBankUpdate(context.Context, *customer_identity_bank.CustomerIdentityBankUpdateRequest) (*customer_identity_bank.CustomerIdentityBankUpdateResponse, error)
+	CustomerIdentityBankDelete(context.Context, *customer_identity_bank.CustomerIdentityBankDeleteRequest) (*customer_identity_bank.CustomerIdentityBankDeleteResponse, error)
+	CustomerIdentityBankFindID(context.Context, *customer_identity_bank.CustomerIdentityBankFindIDRequest) (*customer_identity_bank.CustomerIdentityBankFindIDResponse, error)
+	CustomerIdentityBankFindAll(context.Context, *customer_identity_bank.CustomerIdentityBankFindAllRequest) (*customer_identity_bank.CustomerIdentityBankFindAllResponse, error)
+	mustEmbedUnimplementedCustomerIdentityBankServiceServer()
+}
+
+// UnimplementedCustomerIdentityBankServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedCustomerIdentityBankServiceServer struct {
+}
+
+func (UnimplementedCustomerIdentityBankServiceServer) CustomerIdentityBankCreate(context.Context, *customer_identity_bank.CustomerIdentityBankCreateRequest) (*customer_identity_bank.CustomerIdentityBankCreateResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityBankCreate not implemented")
+}
+func (UnimplementedCustomerIdentityBankServiceServer) CustomerIdentityBankUpdate(context.Context, *customer_identity_bank.CustomerIdentityBankUpdateRequest) (*customer_identity_bank.CustomerIdentityBankUpdateResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityBankUpdate not implemented")
+}
+func (UnimplementedCustomerIdentityBankServiceServer) CustomerIdentityBankDelete(context.Context, *customer_identity_bank.CustomerIdentityBankDeleteRequest) (*customer_identity_bank.CustomerIdentityBankDeleteResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityBankDelete not implemented")
+}
+func (UnimplementedCustomerIdentityBankServiceServer) CustomerIdentityBankFindID(context.Context, *customer_identity_bank.CustomerIdentityBankFindIDRequest) (*customer_identity_bank.CustomerIdentityBankFindIDResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityBankFindID not implemented")
+}
+func (UnimplementedCustomerIdentityBankServiceServer) CustomerIdentityBankFindAll(context.Context, *customer_identity_bank.CustomerIdentityBankFindAllRequest) (*customer_identity_bank.CustomerIdentityBankFindAllResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityBankFindAll not implemented")
+}
+func (UnimplementedCustomerIdentityBankServiceServer) mustEmbedUnimplementedCustomerIdentityBankServiceServer() {
+}
+
+// UnsafeCustomerIdentityBankServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to CustomerIdentityBankServiceServer will
+// result in compilation errors.
+type UnsafeCustomerIdentityBankServiceServer interface {
+	mustEmbedUnimplementedCustomerIdentityBankServiceServer()
+}
+
+func RegisterCustomerIdentityBankServiceServer(s grpc.ServiceRegistrar, srv CustomerIdentityBankServiceServer) {
+	s.RegisterService(&CustomerIdentityBankService_ServiceDesc, srv)
+}
+
+func _CustomerIdentityBankService_CustomerIdentityBankCreate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_bank.CustomerIdentityBankCreateRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankCreate(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankCreate",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankCreate(ctx, req.(*customer_identity_bank.CustomerIdentityBankCreateRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CustomerIdentityBankService_CustomerIdentityBankUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_bank.CustomerIdentityBankUpdateRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankUpdate(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankUpdate",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankUpdate(ctx, req.(*customer_identity_bank.CustomerIdentityBankUpdateRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CustomerIdentityBankService_CustomerIdentityBankDelete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_bank.CustomerIdentityBankDeleteRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankDelete(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankDelete",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankDelete(ctx, req.(*customer_identity_bank.CustomerIdentityBankDeleteRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CustomerIdentityBankService_CustomerIdentityBankFindID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_bank.CustomerIdentityBankFindIDRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankFindID(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankFindID",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankFindID(ctx, req.(*customer_identity_bank.CustomerIdentityBankFindIDRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CustomerIdentityBankService_CustomerIdentityBankFindAll_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity_bank.CustomerIdentityBankFindAllRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankFindAll(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityBankService/CustomerIdentityBankFindAll",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityBankServiceServer).CustomerIdentityBankFindAll(ctx, req.(*customer_identity_bank.CustomerIdentityBankFindAllRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// CustomerIdentityBankService_ServiceDesc is the grpc.ServiceDesc for CustomerIdentityBankService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var CustomerIdentityBankService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "kponboardingproto.CustomerIdentityBankService",
+	HandlerType: (*CustomerIdentityBankServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "CustomerIdentityBankCreate",
+			Handler:    _CustomerIdentityBankService_CustomerIdentityBankCreate_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityBankUpdate",
+			Handler:    _CustomerIdentityBankService_CustomerIdentityBankUpdate_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityBankDelete",
+			Handler:    _CustomerIdentityBankService_CustomerIdentityBankDelete_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityBankFindID",
+			Handler:    _CustomerIdentityBankService_CustomerIdentityBankFindID_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityBankFindAll",
+			Handler:    _CustomerIdentityBankService_CustomerIdentityBankFindAll_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

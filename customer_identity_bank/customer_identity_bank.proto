@@ -1,0 +1,101 @@
+syntax = "proto3";
+
+package kponboardingproto;
+
+import "onboarding_pagination/onboarding_pagination.proto";
+
+option go_package = "github.com/djoonta/kponboardingproto/customer_identity_bank";
+
+message CustomerIdentityBankInfo {
+  // Primary key
+  string id = 1;
+
+  // Foreign key: bank_id
+  string bank_id = 2;
+
+  // Foreign key: customer_identity_id
+  string customer_identity_id = 3;
+
+  // Account number
+  string account_number = 4;
+
+  // Path to the card book image
+  string card_book_image = 5;
+
+  // Path to the e-statement image
+  string estatement_image = 6;
+
+  // Created timestamp
+  string created_at = 7;
+}
+
+message CustomerIdentityBankCreateRequest{
+  // Foreign key: bank_id
+  string bank_id = 1;
+
+  // Foreign key: customer_identity_id
+  string customer_identity_id = 2;
+
+  // Account number
+  string account_number = 3;
+
+  // Path to the card book image
+  string card_book_image = 4;
+
+  // Path to the e-statement image
+  string estatement_image = 5;
+}
+
+message CustomerIdentityBankCreateResponse{
+  bool success = 1;
+}
+
+message CustomerIdentityBankUpdateRequest{
+  // Primary key
+  string id = 1;
+
+  // Foreign key: bank_id
+  string bank_id = 2;
+
+  // Foreign key: customer_identity_id
+  string customer_identity_id = 3;
+
+  // Account number
+  string account_number = 4;
+
+  // Path to the card book image
+  string card_book_image = 5;
+
+  // Path to the e-statement image
+  string estatement_image = 6;
+}
+
+message CustomerIdentityBankUpdateResponse{
+  bool success = 1;
+}
+
+message CustomerIdentityBankDeleteRequest{
+  string id = 1;
+}
+
+message CustomerIdentityBankDeleteResponse{
+  bool success = 1;
+}
+
+message CustomerIdentityBankFindIDRequest{
+  string id = 1;
+}
+
+message CustomerIdentityBankFindIDResponse{
+  CustomerIdentityBankInfo customer_identity_bank_info = 1;
+}
+
+message CustomerIdentityBankFindAllRequest{
+  string page = 1;
+  string limit = 2;
+}
+
+message CustomerIdentityBankFindAllResponse{
+  repeated CustomerIdentityBankInfo customer_identity_banks = 1;
+  OnboardingPaginationInfo pagination = 2;
+}
