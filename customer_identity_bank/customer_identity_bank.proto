@@ -27,6 +27,10 @@ message CustomerIdentityBankInfo {
 
   // Created timestamp
   string created_at = 7;
+
+  // Detail
+  string bank_name = 8;
+  string customer_identity_name = 9;
 }
 
 message CustomerIdentityBankCreateRequest{
