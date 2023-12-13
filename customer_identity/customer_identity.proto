@@ -218,6 +218,8 @@ message CustomerIdentityDeleteResponse{
 
 message CustomerIdentityToggleStatusRequest{
   string id = 1;
+  string status = 2;
+  string note = 3;
 }
 
 message CustomerIdentityToggleStatusResponse{
