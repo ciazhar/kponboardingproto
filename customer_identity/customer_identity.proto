@@ -75,6 +75,9 @@ message CustomerIdentityInfo {
   string installment_category_name = 43;
   string encumbrance_category_name = 44;
   string profession_name = 45;
+
+  // Rejected Note
+  string rejected_note = 46;
 }
 
 message CustomerIdentityCreateRequest{
@@ -219,7 +222,7 @@ message CustomerIdentityDeleteResponse{
 message CustomerIdentityToggleStatusRequest{
   string id = 1;
   string status = 2;
-  string note = 3;
+  string rejected_note = 3;
 }
 
 message CustomerIdentityToggleStatusResponse{
