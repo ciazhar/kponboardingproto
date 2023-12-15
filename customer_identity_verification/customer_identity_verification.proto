@@ -23,17 +23,18 @@ message CustomerIdentityVerificationInfo {
   string created_by = 11;
   string updated_at = 12;
   string updated_by = 13;
+  string customer_identity_id = 14;
+  string fullname_customer_identity = 15;
 }
 
 message CustomerIdentityVerificationCreateRequest {
   string application_number = 1;
-  string rejection_notes = 2;
-  string status_verification = 3;
-  double amount_credit_approved = 4;
-  string amount_withdraw_date = 5;
-  string contract_document_image = 6;
-  string customer_identity_image = 7;
-  string group_chairman_image = 8;
+  string status_verification = 2;
+  double amount_credit_approved = 3;
+  string amount_withdraw_date = 4;
+  string contract_document_image = 5;
+  string customer_identity_image = 6;
+  string group_chairman_image = 7;
 }
 
 message CustomerIdentityVerificationCreateResponse {
@@ -42,14 +43,13 @@ message CustomerIdentityVerificationCreateResponse {
 
 message CustomerIdentityVerificationUpdateRequest {
   string id = 1;
-  string application_number = 2;
-  string rejection_notes = 3;
-  string status_verification = 4;
-  double amount_credit_approved = 5;
-  string amount_withdraw_date = 6;
-  string contract_document_image = 7;
-  string customer_identity_image = 8;
-  string group_chairman_image = 9;
+  string rejection_notes = 2;
+  string status_verification = 3;
+  double amount_credit_approved = 4;
+  string amount_withdraw_date = 5;
+  string contract_document_image = 6;
+  string customer_identity_image = 7;
+  string group_chairman_image = 8;
 }
 
 message CustomerIdentityVerificationUpdateResponse {
