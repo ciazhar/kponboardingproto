@@ -28,12 +28,13 @@ message CustomerIdentityVerificationInfo {
 }
 
 message CustomerIdentityVerificationCreateRequest {
-  string status_verification = 1;
-  double amount_credit_approved = 2;
-  string amount_withdraw_date = 3;
-  string contract_document_image = 4;
-  string customer_identity_image = 5;
-  string group_chairman_image = 6;
+  double amount_credit_approved = 1;
+  string amount_withdraw_date = 2;
+  string contract_document_image = 3;
+  string customer_identity_image = 4;
+  string group_chairman_image = 5;
+  string customer_identity_id = 6;
+  string fullname_customer_identity = 7;
 }
 
 message CustomerIdentityVerificationCreateResponse {
@@ -49,6 +50,8 @@ message CustomerIdentityVerificationUpdateRequest {
   string contract_document_image = 6;
   string customer_identity_image = 7;
   string group_chairman_image = 8;
+  string customer_identity_id = 9;
+  string fullname_customer_identity = 10;
 }
 
 message CustomerIdentityVerificationUpdateResponse {
