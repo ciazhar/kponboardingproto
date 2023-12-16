@@ -28,13 +28,12 @@ message CustomerIdentityVerificationInfo {
 }
 
 message CustomerIdentityVerificationCreateRequest {
-  string application_number = 1;
-  string status_verification = 2;
-  double amount_credit_approved = 3;
-  string amount_withdraw_date = 4;
-  string contract_document_image = 5;
-  string customer_identity_image = 6;
-  string group_chairman_image = 7;
+  string status_verification = 1;
+  double amount_credit_approved = 2;
+  string amount_withdraw_date = 3;
+  string contract_document_image = 4;
+  string customer_identity_image = 5;
+  string group_chairman_image = 6;
 }
 
 message CustomerIdentityVerificationCreateResponse {
