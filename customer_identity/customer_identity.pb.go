@@ -1688,6 +1688,155 @@ func (x *CustomerIdentityFindAllResponse) GetPagination() *onboarding_pagination
 	return nil
 }
 
+type CustomerIdentityListNameInfo struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Id   string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+}
+
+func (x *CustomerIdentityListNameInfo) Reset() {
+	*x = CustomerIdentityListNameInfo{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_customer_identity_customer_identity_proto_msgTypes[13]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CustomerIdentityListNameInfo) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CustomerIdentityListNameInfo) ProtoMessage() {}
+
+func (x *CustomerIdentityListNameInfo) ProtoReflect() protoreflect.Message {
+	mi := &file_customer_identity_customer_identity_proto_msgTypes[13]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CustomerIdentityListNameInfo.ProtoReflect.Descriptor instead.
+func (*CustomerIdentityListNameInfo) Descriptor() ([]byte, []int) {
+	return file_customer_identity_customer_identity_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *CustomerIdentityListNameInfo) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *CustomerIdentityListNameInfo) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+type CustomerIdentityListNameRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+}
+
+func (x *CustomerIdentityListNameRequest) Reset() {
+	*x = CustomerIdentityListNameRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_customer_identity_customer_identity_proto_msgTypes[14]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CustomerIdentityListNameRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CustomerIdentityListNameRequest) ProtoMessage() {}
+
+func (x *CustomerIdentityListNameRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_customer_identity_customer_identity_proto_msgTypes[14]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CustomerIdentityListNameRequest.ProtoReflect.Descriptor instead.
+func (*CustomerIdentityListNameRequest) Descriptor() ([]byte, []int) {
+	return file_customer_identity_customer_identity_proto_rawDescGZIP(), []int{14}
+}
+
+func (x *CustomerIdentityListNameRequest) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+type CustomerIdentityListNameResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CustomerIdentities []*CustomerIdentityListNameInfo `protobuf:"bytes,1,rep,name=customer_identities,json=customerIdentities,proto3" json:"customer_identities,omitempty"`
+}
+
+func (x *CustomerIdentityListNameResponse) Reset() {
+	*x = CustomerIdentityListNameResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_customer_identity_customer_identity_proto_msgTypes[15]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CustomerIdentityListNameResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CustomerIdentityListNameResponse) ProtoMessage() {}
+
+func (x *CustomerIdentityListNameResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_customer_identity_customer_identity_proto_msgTypes[15]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CustomerIdentityListNameResponse.ProtoReflect.Descriptor instead.
+func (*CustomerIdentityListNameResponse) Descriptor() ([]byte, []int) {
+	return file_customer_identity_customer_identity_proto_rawDescGZIP(), []int{15}
+}
+
+func (x *CustomerIdentityListNameResponse) GetCustomerIdentities() []*CustomerIdentityListNameInfo {
+	if x != nil {
+		return x.CustomerIdentities
+	}
+	return nil
+}
+
 var File_customer_identity_customer_identity_proto protoreflect.FileDescriptor
 
 var file_customer_identity_customer_identity_proto_rawDesc = []byte{
@@ -2039,11 +2188,27 @@ var file_customer_identity_customer_identity_proto_rawDesc = []byte{
 	0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4f, 0x6e, 0x62, 0x6f,
 	0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x50, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e,
 	0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e,
-	0x42, 0x38, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x64,
-	0x6a, 0x6f, 0x6f, 0x6e, 0x74, 0x61, 0x2f, 0x6b, 0x70, 0x6f, 0x6e, 0x62, 0x6f, 0x61, 0x72, 0x64,
-	0x69, 0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65,
-	0x72, 0x5f, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+	0x22, 0x42, 0x0a, 0x1c, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e,
+	0x74, 0x69, 0x74, 0x79, 0x4c, 0x69, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x49, 0x6e, 0x66, 0x6f,
+	0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64,
+	0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04,
+	0x6e, 0x61, 0x6d, 0x65, 0x22, 0x35, 0x0a, 0x1f, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
+	0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x4c, 0x69, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x22, 0x84, 0x01, 0x0a, 0x20,
+	0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79,
+	0x4c, 0x69, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x12, 0x60, 0x0a, 0x13, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x65,
+	0x6e, 0x74, 0x69, 0x74, 0x69, 0x65, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x2f, 0x2e,
+	0x6b, 0x70, 0x6f, 0x6e, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x69, 0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69,
+	0x74, 0x79, 0x4c, 0x69, 0x73, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x12,
+	0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x49, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x69,
+	0x65, 0x73, 0x42, 0x38, 0x5a, 0x36, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
+	0x2f, 0x64, 0x6a, 0x6f, 0x6f, 0x6e, 0x74, 0x61, 0x2f, 0x6b, 0x70, 0x6f, 0x6e, 0x62, 0x6f, 0x61,
+	0x72, 0x64, 0x69, 0x6e, 0x67, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x63, 0x75, 0x73, 0x74, 0x6f,
+	0x6d, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x65, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2058,7 +2223,7 @@ func file_customer_identity_customer_identity_proto_rawDescGZIP() []byte {
 	return file_customer_identity_customer_identity_proto_rawDescData
 }
 
-var file_customer_identity_customer_identity_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
+var file_customer_identity_customer_identity_proto_msgTypes = make([]protoimpl.MessageInfo, 16)
 var file_customer_identity_customer_identity_proto_goTypes = []interface{}{
 	(*CustomerIdentityInfo)(nil),                           // 0: kponboardingproto.CustomerIdentityInfo
 	(*CustomerIdentityCreateRequest)(nil),                  // 1: kponboardingproto.CustomerIdentityCreateRequest
@@ -2073,17 +2238,21 @@ var file_customer_identity_customer_identity_proto_goTypes = []interface{}{
 	(*CustomerIdentityFindIDResponse)(nil),                 // 10: kponboardingproto.CustomerIdentityFindIDResponse
 	(*CustomerIdentityFindAllRequest)(nil),                 // 11: kponboardingproto.CustomerIdentityFindAllRequest
 	(*CustomerIdentityFindAllResponse)(nil),                // 12: kponboardingproto.CustomerIdentityFindAllResponse
-	(*onboarding_pagination.OnboardingPaginationInfo)(nil), // 13: kponboardingproto.OnboardingPaginationInfo
+	(*CustomerIdentityListNameInfo)(nil),                   // 13: kponboardingproto.CustomerIdentityListNameInfo
+	(*CustomerIdentityListNameRequest)(nil),                // 14: kponboardingproto.CustomerIdentityListNameRequest
+	(*CustomerIdentityListNameResponse)(nil),               // 15: kponboardingproto.CustomerIdentityListNameResponse
+	(*onboarding_pagination.OnboardingPaginationInfo)(nil), // 16: kponboardingproto.OnboardingPaginationInfo
 }
 var file_customer_identity_customer_identity_proto_depIdxs = []int32{
 	0,  // 0: kponboardingproto.CustomerIdentityFindIDResponse.customer_identity_info:type_name -> kponboardingproto.CustomerIdentityInfo
 	0,  // 1: kponboardingproto.CustomerIdentityFindAllResponse.customer_identities:type_name -> kponboardingproto.CustomerIdentityInfo
-	13, // 2: kponboardingproto.CustomerIdentityFindAllResponse.pagination:type_name -> kponboardingproto.OnboardingPaginationInfo
-	3,  // [3:3] is the sub-list for method output_type
-	3,  // [3:3] is the sub-list for method input_type
-	3,  // [3:3] is the sub-list for extension type_name
-	3,  // [3:3] is the sub-list for extension extendee
-	0,  // [0:3] is the sub-list for field type_name
+	16, // 2: kponboardingproto.CustomerIdentityFindAllResponse.pagination:type_name -> kponboardingproto.OnboardingPaginationInfo
+	13, // 3: kponboardingproto.CustomerIdentityListNameResponse.customer_identities:type_name -> kponboardingproto.CustomerIdentityListNameInfo
+	4,  // [4:4] is the sub-list for method output_type
+	4,  // [4:4] is the sub-list for method input_type
+	4,  // [4:4] is the sub-list for extension type_name
+	4,  // [4:4] is the sub-list for extension extendee
+	0,  // [0:4] is the sub-list for field type_name
 }
 
 func init() { file_customer_identity_customer_identity_proto_init() }
@@ -2248,6 +2417,42 @@ func file_customer_identity_customer_identity_proto_init() {
 				return nil
 			}
 		}
+		file_customer_identity_customer_identity_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CustomerIdentityListNameInfo); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_customer_identity_customer_identity_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CustomerIdentityListNameRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_customer_identity_customer_identity_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*CustomerIdentityListNameResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -2255,7 +2460,7 @@ func file_customer_identity_customer_identity_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_customer_identity_customer_identity_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   13,
+			NumMessages:   16,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

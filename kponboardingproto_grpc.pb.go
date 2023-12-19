@@ -155,6 +155,7 @@ type CustomerIdentityServiceClient interface {
 	CustomerIdentityToggleStatus(ctx context.Context, in *customer_identity.CustomerIdentityToggleStatusRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityToggleStatusResponse, error)
 	CustomerIdentityFindID(ctx context.Context, in *customer_identity.CustomerIdentityFindIDRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityFindIDResponse, error)
 	CustomerIdentityFindAll(ctx context.Context, in *customer_identity.CustomerIdentityFindAllRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityFindAllResponse, error)
+	CustomerIdentityListName(ctx context.Context, in *customer_identity.CustomerIdentityListNameRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityListNameResponse, error)
 }
 
 type customerIdentityServiceClient struct {
@@ -219,6 +220,15 @@ func (c *customerIdentityServiceClient) CustomerIdentityFindAll(ctx context.Cont
 	return out, nil
 }
 
+func (c *customerIdentityServiceClient) CustomerIdentityListName(ctx context.Context, in *customer_identity.CustomerIdentityListNameRequest, opts ...grpc.CallOption) (*customer_identity.CustomerIdentityListNameResponse, error) {
+	out := new(customer_identity.CustomerIdentityListNameResponse)
+	err := c.cc.Invoke(ctx, "/kponboardingproto.CustomerIdentityService/CustomerIdentityListName", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CustomerIdentityServiceServer is the server API for CustomerIdentityService service.
 // All implementations must embed UnimplementedCustomerIdentityServiceServer
 // for forward compatibility
@@ -229,6 +239,7 @@ type CustomerIdentityServiceServer interface {
 	CustomerIdentityToggleStatus(context.Context, *customer_identity.CustomerIdentityToggleStatusRequest) (*customer_identity.CustomerIdentityToggleStatusResponse, error)
 	CustomerIdentityFindID(context.Context, *customer_identity.CustomerIdentityFindIDRequest) (*customer_identity.CustomerIdentityFindIDResponse, error)
 	CustomerIdentityFindAll(context.Context, *customer_identity.CustomerIdentityFindAllRequest) (*customer_identity.CustomerIdentityFindAllResponse, error)
+	CustomerIdentityListName(context.Context, *customer_identity.CustomerIdentityListNameRequest) (*customer_identity.CustomerIdentityListNameResponse, error)
 	mustEmbedUnimplementedCustomerIdentityServiceServer()
 }
 
@@ -253,6 +264,9 @@ func (UnimplementedCustomerIdentityServiceServer) CustomerIdentityFindID(context
 }
 func (UnimplementedCustomerIdentityServiceServer) CustomerIdentityFindAll(context.Context, *customer_identity.CustomerIdentityFindAllRequest) (*customer_identity.CustomerIdentityFindAllResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityFindAll not implemented")
+}
+func (UnimplementedCustomerIdentityServiceServer) CustomerIdentityListName(context.Context, *customer_identity.CustomerIdentityListNameRequest) (*customer_identity.CustomerIdentityListNameResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CustomerIdentityListName not implemented")
 }
 func (UnimplementedCustomerIdentityServiceServer) mustEmbedUnimplementedCustomerIdentityServiceServer() {
 }
@@ -376,6 +390,24 @@ func _CustomerIdentityService_CustomerIdentityFindAll_Handler(srv interface{}, c
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CustomerIdentityService_CustomerIdentityListName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(customer_identity.CustomerIdentityListNameRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CustomerIdentityServiceServer).CustomerIdentityListName(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/kponboardingproto.CustomerIdentityService/CustomerIdentityListName",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CustomerIdentityServiceServer).CustomerIdentityListName(ctx, req.(*customer_identity.CustomerIdentityListNameRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // CustomerIdentityService_ServiceDesc is the grpc.ServiceDesc for CustomerIdentityService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -406,6 +438,10 @@ var CustomerIdentityService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CustomerIdentityFindAll",
 			Handler:    _CustomerIdentityService_CustomerIdentityFindAll_Handler,
+		},
+		{
+			MethodName: "CustomerIdentityListName",
+			Handler:    _CustomerIdentityService_CustomerIdentityListName_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

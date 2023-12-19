@@ -246,3 +246,16 @@ message CustomerIdentityFindAllResponse{
   repeated CustomerIdentityInfo customer_identities = 1;
   OnboardingPaginationInfo pagination = 2;
 }
+
+message CustomerIdentityListNameInfo{
+  string id = 1;
+  string name = 2;
+}
+
+message CustomerIdentityListNameRequest{
+  string name = 1;
+}
+
+message CustomerIdentityListNameResponse{
+  repeated CustomerIdentityListNameInfo customer_identities = 1;
+}

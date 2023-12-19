@@ -21,6 +21,7 @@ service CustomerIdentityService {
   rpc CustomerIdentityToggleStatus(CustomerIdentityToggleStatusRequest) returns (CustomerIdentityToggleStatusResponse) {}
   rpc CustomerIdentityFindID(CustomerIdentityFindIDRequest) returns (CustomerIdentityFindIDResponse) {}
   rpc CustomerIdentityFindAll(CustomerIdentityFindAllRequest) returns (CustomerIdentityFindAllResponse) {}
+  rpc CustomerIdentityListName(CustomerIdentityListNameRequest) returns (CustomerIdentityListNameResponse) {}
 }
 
 service CustomerIdentityVerificationService {
